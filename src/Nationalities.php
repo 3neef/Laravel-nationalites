@@ -2,9 +2,6 @@
 
 namespace Aneef\Nationalities;
 
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Lang;
-
 class Nationalities
 {
     /**
@@ -15,14 +12,14 @@ class Nationalities
      */
     public static function get(array $except = []): array
     {
-        $locale = App::getLocale();
+        $locale = app()->getLocale();
         
         // Get all nationality translations for current locale
-        $nationalities = Lang::get('nationalities::nationalities', [], $locale);
+        $nationalities = trans('nationalities::nationalities', [], $locale);
         
         // If translation returns the key (not found), fall back to English
         if (is_string($nationalities) || empty($nationalities)) {
-            $nationalities = Lang::get('nationalities::nationalities', [], 'en');
+            $nationalities = trans('nationalities::nationalities', [], 'en');
         }
         
         // Remove excluded nationalities
@@ -42,7 +39,7 @@ class Nationalities
      */
     public static function getByCode(string $code, ?string $locale = null): ?string
     {
-        $locale = $locale ?? App::getLocale();
+        $locale = $locale ?? app()->getLocale();
         $nationalities = static::get();
         
         return $nationalities[$code] ?? null;
