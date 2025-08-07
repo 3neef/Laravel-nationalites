@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Initial release
-- `LocalizedNationalities` class with `get()` method
+- `Nationalities` class with `get()` method
 - Support for excluding nationality codes
 - Localization support for English and Arabic
 - Laravel Filament compatibility
