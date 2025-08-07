@@ -186,7 +186,8 @@ public function render()
 
 ## 🎯 **Package Features**
 
-✅ **Laravel 9, 10, 11 Compatible**  
+✅ **Laravel 8, 9, 10, 11 Compatible**  
+✅ **PHP 8.0+ Support**  
 ✅ **Auto-discovery Support**  
 ✅ **Localization Ready**  
 ✅ **Filament Integration**  
