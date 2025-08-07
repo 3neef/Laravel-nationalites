@@ -1,0 +1,16 @@
+vendor/
+node_modules/
+.env
+.env.local
+.env.*.local
+.DS_Store
+Thumbs.db
+*.log
+build/
+.phpunit.result.cache
+composer.lock
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
